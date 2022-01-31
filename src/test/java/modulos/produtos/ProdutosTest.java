@@ -1,11 +1,9 @@
 package modulos.produtos;
 
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import paginas.LoginPage;
-
 import java.time.Duration;
 
 @DisplayName("Teste Web do modulo de produtos")
@@ -15,17 +13,14 @@ public class ProdutosTest {
 
     @BeforeEach
     public void beforeEach() {
-        //Abrir o navegador
+
         System.setProperty("webdriver.chrome.driver", "C:\\driver\\chromedriver.exe");
         this.navegador = new ChromeDriver();
 
-        //vou maximizar a tela
         this.navegador.manage().window().maximize();
 
-        //vou defenir um tempo de espera padão de 5 segundos
         this.navegador.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        //navegar para a pagina da lojinha web
         this.navegador.get("http://165.227.93.41/lojinha-web-bugada/v2/");
     }
 
@@ -100,7 +95,7 @@ public class ProdutosTest {
 
     @AfterEach
     public void afterEach() {
-        //vou fechar o navegador
+
         navegador.quit();
     }
 }
