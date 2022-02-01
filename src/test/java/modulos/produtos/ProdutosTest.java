@@ -21,7 +21,7 @@ public class ProdutosTest {
 
         this.navegador.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-        this.navegador.get("http://165.227.93.41/lojinha-web-bugada/v2/");
+        this.navegador.get("http://165.227.93.41/lojinha-web/v2/");
     }
 
     @Test
